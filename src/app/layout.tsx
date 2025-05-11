@@ -1,5 +1,6 @@
-import GlobalHeader from '@/components/global-header'
+import Link from 'next/link'
 import React from 'react'
+import './globals.css'
 
 export default function BasicLayout({
   children,
@@ -10,7 +11,14 @@ export default function BasicLayout({
     <html>
       <body>
         <header className="bg-gray-800 text-white p-4">
-          <GlobalHeader />
+          <nav className="flex">
+            <Link href="/" className="hover:text-gray-300">
+              首页
+            </Link>
+            <Link href="/interview" className="hover:text-gray-300">
+              面经
+            </Link>
+          </nav>
         </header>
         <main className="p-4">{children}</main>
         <footer className="bg-gray-800 text-white p-4 text-center">
