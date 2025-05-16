@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KK 农场
 
-## Getting Started
+🌾 欢迎来到 KK 农场！一起耕耘代码沃土吧！
 
-First, run the development server:
+🎉 欢迎各位勤劳的 “新农人” 加入 KK 农场！在这里，我们以代码为种子 🌱，用智慧来灌溉 💧，共同培育出超棒的项目成果！
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🧑‍🌾 我是农场主 KK
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+作为你们的 “农场主”👒，我会为大家提供最肥沃的 “技术土地”，准备丰富的 “开发养料”📚。当然，我也会时刻关注农场动态，和大家一起攻克难题，让每一个创意都能开花结果 🌼！
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚜 工作指南
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 认领任务：查看 Tasks 板块，找到适合自己的 “耕地”，开启开发之旅 🚀
+- 团队协作：使用 Discussions 交流种植心得，在 Pull Requests 中互相帮助，让代码更健壮 💪
+- 成果验收：通过测试的 “作物” 才能丰收，记得做好 Tests 哦 🧪
 
-## Learn More
+## 🌟 加入我们
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+无论你是经验丰富的 “老农夫”，还是刚刚入门的 “小萌新”，KK 农场都欢迎你！快来提交 Issues 表达你的加入意愿，让我们一起在代码的田野上创造奇迹吧 🌌！
