@@ -1,3 +1,6 @@
+import fs from 'fs'
+import path from 'path'
+
 export default async function Post({
   params,
 }: {
@@ -9,8 +12,15 @@ export default async function Post({
   return <Post />
 }
 
-export function generateStaticParams() {
-  return [{ slug: 'interview' }]
+export async function generateStaticParams() {
+  const contentDir = path.join(process.cwd(), 'src/content')
+  const files = fs.readdirSync(contentDir)
+
+  return files
+    .filter((file) => file.endsWith('.mdx'))
+    .map((file) => ({
+      slug: file.replace(/\.mdx$/, ''),
+    }))
 }
 
 export const dynamicParams = false
