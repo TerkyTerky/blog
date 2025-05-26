@@ -6,6 +6,17 @@ import withRspack from 'next-rspack'
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   experimental: { mdxRs: false },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'kunkun-img.oss-cn-shanghai.aliyuncs.com',
+        port: '',
+        pathname: '/**',
+        search: '',
+      },
+    ],
+  },
 }
 
 const withMDX = createMDX({

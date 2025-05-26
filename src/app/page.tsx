@@ -19,7 +19,7 @@ export default function Home() {
         </OrbitingCircles>
         <div>
           <Image
-            src="/avatar.jpg"
+            src="https://kunkun-img.oss-cn-shanghai.aliyuncs.com/avatar.jpg"
             width={100}
             height={100}
             alt="avatar"
