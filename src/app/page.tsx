@@ -19,7 +19,7 @@ export default function Home() {
         </OrbitingCircles>
         <div>
           <Image
-            src="/avatar.jpg"
+            src="https://kunkun-img.oss-cn-shanghai.aliyuncs.com/avatar.jpg"
             width={100}
             height={100}
             alt="avatar"
@@ -27,9 +27,9 @@ export default function Home() {
           />
         </div>
         <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
-          <Icons.byteDance />
-          <Icons.redNote />
-          <Icons.gitHub />
+          <Icons.react />
+          <Icons.node />
+          <Icons.vue />
         </OrbitingCircles>
       </div>
     </div>
