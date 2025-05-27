@@ -27,9 +27,9 @@ export default function Home() {
           />
         </div>
         <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
-          <Icons.byteDance />
-          <Icons.redNote />
-          <Icons.gitHub />
+          <Icons.react />
+          <Icons.node />
+          <Icons.vue />
         </OrbitingCircles>
       </div>
     </div>
