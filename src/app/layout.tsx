@@ -1,3 +1,4 @@
+import Footer from '@/components/footer'
 import NavBar from '@/components/nav-bar'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -18,6 +19,7 @@ export default function BasicLayout({
           <Analytics />
           <SpeedInsights />
         </main>
+        <Footer />
       </body>
     </html>
   )

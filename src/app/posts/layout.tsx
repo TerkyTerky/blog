@@ -1,4 +1,9 @@
-import FileTree from './file-tree'
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from '@/components/ui/resizable'
+import FileTree from '../../components/file-tree'
 
 export default function Layout({
   children,
@@ -6,9 +11,14 @@ export default function Layout({
   children: React.ReactNode
 }>) {
   return (
-    <div className="flex min-h-screen">
-      <FileTree />
-      <div className="flex-1 p-6 overflow-y-auto">{children}</div>
-    </div>
+    <ResizablePanelGroup direction="horizontal">
+      <ResizablePanel>
+        <FileTree />
+      </ResizablePanel>
+      <ResizableHandle />
+      <ResizablePanel>
+        <div className="p-6 overflow-y-auto">{children}</div>
+      </ResizablePanel>
+    </ResizablePanelGroup>
   )
 }
