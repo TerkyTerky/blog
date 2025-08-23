@@ -1,9 +1,7 @@
-import Link from 'next/link'
-
 export default function PostPage() {
   return (
-    <div className="flex">
-      <Link href={'/posts/interview'}>tt</Link>
+    <div className="flex items-center justify-center h-full text-gray-400">
+      请选择左侧的文章
     </div>
   )
 }

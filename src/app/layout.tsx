@@ -1,4 +1,5 @@
-import NavBar from '@/components/nav-bar'
+import Footer from '@/components/global-component/footer'
+import { Header } from '@/components/global-component/header'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import React from 'react'
@@ -12,12 +13,11 @@ export default function BasicLayout({
   return (
     <html>
       <body>
-        <NavBar />
-        <main className="p-4">
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </main>
+        <Header />
+        <main className="max-w-6xl mx-auto px-4">{children}</main>
+        <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
