@@ -7,13 +7,13 @@ export default async function Post({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const { default: Post } = await import(`@/content/${slug}.mdx`)
+  const { default: Post } = await import(`@/markdown/posts/${slug}.mdx`)
 
   return <Post />
 }
 
 export async function generateStaticParams() {
-  const contentDir = path.join(process.cwd(), 'src/content')
+  const contentDir = path.join(process.cwd(), 'src/markdown/posts')
   const files = fs.readdirSync(contentDir)
 
   return files

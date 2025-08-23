@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full bg-white shadow-sm] border-t py-6 mt-auto">
+    <div className="w-full bg-white shadow-sm] border-t py-6 mt-auto">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
         <div className="text-gray-500 text-sm mb-2 md:mb-0">
           © {new Date().getFullYear()}{' '}
@@ -38,6 +38,6 @@ export default function Footer() {
           </a>
         </div>
       </div>
-    </footer>
+    </div>
   )
 }

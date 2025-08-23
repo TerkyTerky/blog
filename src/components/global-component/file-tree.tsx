@@ -1,7 +1,13 @@
-import { fileTreeList } from '@/constants/file-tree-list'
 import Link from 'next/link'
 
-export default function FileTree() {
+interface FileTreeProps {
+  fileTreeList: {
+    slug: string
+    title: string
+  }[]
+}
+
+export default function FileTree({ fileTreeList }: FileTreeProps) {
   return (
     <div className="flex flex-col w-56 p-4 space-y-2">
       {fileTreeList.map((node) => (

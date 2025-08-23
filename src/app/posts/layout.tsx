@@ -1,9 +1,5 @@
-import {
-  ResizableHandle,
-  ResizablePanel,
-  ResizablePanelGroup,
-} from '@/components/ui/resizable'
-import FileTree from '../../components/file-tree'
+import FileTree from '../../components/global-component/file-tree'
+import { FILE_TREE_LIST } from './const'
 
 export default function Layout({
   children,
@@ -11,14 +7,9 @@ export default function Layout({
   children: React.ReactNode
 }>) {
   return (
-    <ResizablePanelGroup direction="horizontal">
-      <ResizablePanel>
-        <FileTree />
-      </ResizablePanel>
-      <ResizableHandle />
-      <ResizablePanel>
-        <div className="p-6 overflow-y-auto">{children}</div>
-      </ResizablePanel>
-    </ResizablePanelGroup>
+    <div>
+      <FileTree fileTreeList={FILE_TREE_LIST} />
+      <div className="p-6 overflow-y-auto">{children}</div>
+    </div>
   )
 }

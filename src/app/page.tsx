@@ -1,4 +1,3 @@
-import { BlurFade } from '@/components/magicui/blur-fade'
 import { OrbitingCircles } from '@/components/magicui/orbiting-circles'
 import { Icons } from '@/constants/icons'
 import Image from 'next/image'
@@ -11,38 +10,26 @@ const avatarStyle: React.CSSProperties = {
 
 export default function Home() {
   return (
-    <div>
-      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
-        <OrbitingCircles iconSize={40}>
-          <Icons.gitHub />
-          <Icons.redNote />
-          <Icons.byteDance />
-        </OrbitingCircles>
-        <div>
-          <Image
-            src="https://kunkun-img.oss-cn-shanghai.aliyuncs.com/avatar.jpg"
-            width={100}
-            height={100}
-            alt="avatar"
-            style={avatarStyle}
-          />
-        </div>
-        <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
-          <Icons.react />
-          <Icons.node />
-          <Icons.vue />
-        </OrbitingCircles>
+    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+      <OrbitingCircles iconSize={40}>
+        <Icons.gitHub />
+        <Icons.redNote />
+        <Icons.byteDance />
+      </OrbitingCircles>
+      <div>
+        <Image
+          src="https://kunkun-img.oss-cn-shanghai.aliyuncs.com/avatar.jpg"
+          width={100}
+          height={100}
+          alt="avatar"
+          style={avatarStyle}
+        />
       </div>
-      <BlurFade delay={0.25} inView>
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-          Hello MotherF**ker 👋
-        </h2>
-      </BlurFade>
-      <BlurFade delay={0.25 * 2} inView>
-        <span className="text-pretty text-xl tracking-tighter sm:text-3xl xl:text-4xl/none">
-          Nice to meet you
-        </span>
-      </BlurFade>
+      <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
+        <Icons.react />
+        <Icons.node />
+        <Icons.vue />
+      </OrbitingCircles>
     </div>
   )
 }
