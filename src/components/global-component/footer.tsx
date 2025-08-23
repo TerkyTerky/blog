@@ -9,7 +9,7 @@ export default function Footer() {
         </div>
         <div className="flex space-x-4">
           <a
-            href="https://github.com/wulikunkun"
+            href="https://github.com/TerkyTerky"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-black transition-colors"
