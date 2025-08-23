@@ -1,7 +1,11 @@
+import { redirect } from 'next/navigation';
+import { FILE_TREE_LIST } from './const';
+
 export default function PostPage() {
-  return (
-    <div className="flex items-center justify-center h-full text-gray-400">
-      请选择左侧的文章
-    </div>
-  )
+  // 使用第一个文章的 slug 作为默认值
+  const defaultSlug = FILE_TREE_LIST[0]?.slug;
+  if (!defaultSlug) {
+    throw new Error('No posts found');
+  }
+  redirect(`/posts/${defaultSlug}`);
 }
