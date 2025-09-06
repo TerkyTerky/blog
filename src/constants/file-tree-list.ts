@@ -1,4 +1,4 @@
-export const fileTreeList = [
+export const postFileTreeList = [
   {
     title: 'Vue',
     slug: 'vue'

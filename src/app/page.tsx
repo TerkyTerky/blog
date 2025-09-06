@@ -10,26 +10,29 @@ const avatarStyle: React.CSSProperties = {
 
 export default function Home() {
   return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
-      <OrbitingCircles iconSize={40}>
-        <Icons.gitHub />
-        <Icons.redNote />
-        <Icons.byteDance />
-      </OrbitingCircles>
-      <div>
-        <Image
-          src="https://kunkun-img.oss-cn-shanghai.aliyuncs.com/avatar.jpg"
-          width={100}
-          height={100}
-          alt="avatar"
-          style={avatarStyle}
-        />
+    <div>
+      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
+        <OrbitingCircles iconSize={40}>
+          <Icons.gitHub />
+          <Icons.redNote />
+          <Icons.byteDance />
+        </OrbitingCircles>
+        <div>
+          <Image
+            src="https://kunkun-img.oss-cn-shanghai.aliyuncs.com/avatar.jpg"
+            width={100}
+            height={100}
+            alt="avatar"
+            style={avatarStyle}
+          />
+        </div>
+        <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
+          <Icons.react />
+          <Icons.node />
+          <Icons.vue />
+        </OrbitingCircles>
       </div>
-      <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
-        <Icons.react />
-        <Icons.node />
-        <Icons.vue />
-      </OrbitingCircles>
+      <div>荣誉展示</div>
     </div>
   )
 }

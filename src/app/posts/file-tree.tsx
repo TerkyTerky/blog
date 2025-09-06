@@ -1,21 +1,21 @@
-'use client';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+'use client'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface FileTreeProps {
-  fileTreeList: {
-    slug: string;
-    title: string;
-  }[];
+  fileTreeList: Array<{
+    slug: string
+    title: string
+  }>
 }
 
 export default function FileTree({ fileTreeList }: FileTreeProps) {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
     <div className="flex flex-col w-56 p-4 space-y-2">
       {fileTreeList.map((node) => {
-        const isActive = pathname === `/posts/${node.slug}`;
+        const isActive = pathname === `/posts/${node.slug}`
 
         return (
           <Link key={node.slug} href={`/posts/${node.slug}`} className="block">
@@ -29,8 +29,8 @@ export default function FileTree({ fileTreeList }: FileTreeProps) {
               {node.title}
             </div>
           </Link>
-        );
+        )
       })}
     </div>
-  );
+  )
 }
