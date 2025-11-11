@@ -1,5 +1,5 @@
-import { Ampersand } from 'lucide-react'
-import Link from 'next/link'
+import { Ampersand } from 'lucide-react';
+import Link from 'next/link';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -7,25 +7,25 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from '../ui/navigation-menu'
+} from '../ui/navigation-menu';
 
 const docList = [
+  // {
+  //   title: '技术向',
+  //   href: '/posts',
+  //   description: '分享技术文章',
+  // },
   {
-    title: '技术向',
-    href: '/posts',
-    description: '分享技术文章',
+    title: '摄影',
+    href: '/photograph',
+    description: '分享摄影记录',
   },
   {
     title: '吐槽',
     href: '/bullshit',
     description: '分享随机言论',
   },
-  {
-    title: '探索',
-    href: '/treasure',
-    description: '分享宝藏',
-  },
-]
+];
 
 export function Header() {
   return (
@@ -59,7 +59,7 @@ export function Header() {
         </NavigationMenuList>
       </NavigationMenu>
     </div>
-  )
+  );
 }
 
 function ListItem({
@@ -79,5 +79,5 @@ function ListItem({
         </Link>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }

@@ -1,12 +1,12 @@
-import { OrbitingCircles } from '@/components/magicui/orbiting-circles'
-import { Icons } from '@/constants/icons'
-import Image from 'next/image'
+import { OrbitingCircles } from '@/components/magicui/orbiting-circles';
+import { Icons } from '@/constants/icons';
+import Image from 'next/image';
 
 const avatarStyle: React.CSSProperties = {
   borderRadius: '50%',
   boxShadow:
     'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px',
-}
+};
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
         </OrbitingCircles>
         <div>
           <Image
-            src="https://kunkun-img.oss-cn-shanghai.aliyuncs.com/avatar.jpg"
+            src="/avatar.jpg"
             width={100}
             height={100}
             alt="avatar"
@@ -32,7 +32,6 @@ export default function Home() {
           <Icons.vue />
         </OrbitingCircles>
       </div>
-      <div>荣誉展示</div>
     </div>
-  )
+  );
 }
