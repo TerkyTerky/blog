@@ -1,27 +1,27 @@
-import Image from 'next/image';
-import path from 'path';
-import { imageSizeFromFile } from 'image-size/fromFile';
+import { imageSizeFromFile } from 'image-size/fromFile'
+import Image from 'next/image'
+import path from 'path'
 
 const getImageDimension = async (src: string) => {
-  const fullPath = path.join(process.cwd(), 'public', src);
-  const { width, height } = await imageSizeFromFile(fullPath);
-  return { width, height };
-};
+  const fullPath = path.join(process.cwd(), 'public', src)
+  const { width, height } = await imageSizeFromFile(fullPath)
+  return { width, height }
+}
 
 export async function UnoptimizedImage({
   src,
   alt,
   sizing = 'gallery',
 }: {
-  src: string;
-  alt: string;
-  sizing?: 'gallery' | 'single-view';
+  src: string
+  alt: string
+  sizing?: 'gallery' | 'single-view'
 }) {
-  const { width, height } = await getImageDimension(src);
+  const { width, height } = await getImageDimension(src)
 
   if (sizing === 'single-view') {
-    const aspectRatio = width! / height!;
-    const wrapperClassName = aspectRatio > 1 ? 'w-[80vw]' : 'h-[80vh]';
+    const aspectRatio = width! / height!
+    const wrapperClassName = aspectRatio > 1 ? 'w-[80vw]' : 'h-[80vh]'
 
     return (
       <div
@@ -34,19 +34,19 @@ export async function UnoptimizedImage({
           quality={100}
           unoptimized={true}
           fill
-          className="object-contain"
+          className="object-contain brightness-90 hover:brightness-110"
         />
       </div>
-    );
+    )
   }
 
-  const aspectRatio = width! / height!;
-  let finalWidth = 600;
-  let finalHeight = 400;
+  const aspectRatio = width! / height!
+  let finalWidth = 600
+  let finalHeight = 400
 
   if (aspectRatio < 1) {
-    finalWidth = 400;
-    finalHeight = 600;
+    finalWidth = 400
+    finalHeight = 600
   }
 
   return (
@@ -58,5 +58,5 @@ export async function UnoptimizedImage({
       quality={100}
       unoptimized={true}
     />
-  );
+  )
 }
