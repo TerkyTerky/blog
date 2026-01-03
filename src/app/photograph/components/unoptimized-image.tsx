@@ -25,7 +25,7 @@ export async function UnoptimizedImage({
 
     return (
       <div
-        className={`relative ${wrapperClassName}`}
+        className={`relative ${wrapperClassName} mb-4`}
         style={{ aspectRatio: `${width}/${height}` }}
       >
         <Image
@@ -34,7 +34,7 @@ export async function UnoptimizedImage({
           quality={100}
           unoptimized={true}
           fill
-          className="object-contain brightness-90 hover:brightness-110"
+          className="object-contain"
         />
       </div>
     )
@@ -51,6 +51,7 @@ export async function UnoptimizedImage({
 
   return (
     <Image
+      className="brightness-90 hover:brightness-110"
       width={finalWidth}
       height={finalHeight}
       src={src}
